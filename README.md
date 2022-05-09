@@ -35,4 +35,5 @@ Best model performance sensibly increased after balancing the data. The same mod
 ### Improvement suggestions
    - Homogenization of data can be improved by replicating each label 10 times along time in order to have a more informed classifier training. 
    - Number of descriptors can be further increased by extracting statistical features of the 3-axes components (e.g., median, SD, kurtosis, 1st Fourier transform element, etc) 
+   - Check this [repo](https://iohk.io/en/blog/posts/2022/02/03/implementing-hydra-heads-the-first-step-towards-the-full-hydra-vision/) for a more in-depth analysis
 
