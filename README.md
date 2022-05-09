@@ -30,9 +30,9 @@ The test label file (175 rows) has empty cells to be filled with the predicted c
   Imbalanced data	0.722667	0.675894	0.458995
   SMOTE data	0.850939	0.848939	0.801252
   ```
-Best model performance sensibly improved after balancing the data. The same model then was used to extract predicted labels on the test set.
+Best model performance sensibly increased after balancing the data. The same model then was used to extract predicted labels on the test set.
 
 ### Improvement suggestions
    - Homogenization of data can be improved by replicating each label 10 times along time in order to have a more informed classifier training. 
-   - Number of descriptors can be further increased by extracting statistical features of the 3-axes components (e.g., median, SD, kurtosis, 1st Fourier transform element) 
+   - Number of descriptors can be further increased by extracting statistical features of the 3-axes components (e.g., median, SD, kurtosis, 1st Fourier transform element, etc) 
 
