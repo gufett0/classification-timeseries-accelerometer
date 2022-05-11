@@ -19,7 +19,7 @@ The test label file (175 rows) has empty cells to be filled with the predicted c
 ### Main steps of my supervised ML approach
 
 
-  1) **Exploring and cleaning data**. Two critical aspects emerged. Firstly, the different sampling rate between acceleration data (10 Hz, 1 data point every 0.1 second) and multi-label classification (1 Hz, 1 label every second) required a homogenization procedure such that each label has its own descriptor. Here acceleration data was filtered according to the timestamps of each given label, thus reducing the dataframe from 3744 to 375 rows. Secondly, a strong class imbalance was evident and had to be properly addressed.  
+  1) **Exploring and cleaning data**. Two critical aspects emerged. Firstly, the different sampling rate between acceleration data (10 Hz, 1 data point every 0.1 second) and multi-label classification (1 Hz, 1 label every second) required a homogenization procedure* such that each label has its own descriptor. Here acceleration data was filtered according to the timestamps of each given label, thus reducing the dataframe from 3744 to 375 rows. Secondly, a strong class imbalance was evident and had to be properly addressed.  
  
  2) **Modeling**. The 3 classification models covered in the course were also used here: *multinomial logistic regression*, *random forest classifier* and *nearest neighbors classifier*. Since accuracy alone is not optimal to evaluate imbalanced datasets (i.e., accuracy paradox), model selection was based on the average between Accuracy and F1-scores. Furthermore, the highest Cohen's kappa score, a value between -1 and 1, was assessed to further confirm the best model (kappa score represents accuracy normalized by the imbalance of the classes in the data).
  
@@ -34,6 +34,8 @@ Best model performance sensibly increased after balancing the data. The same mod
 
 ### Improvement suggestions
    - Homogenization of data can be improved by replicating each label 10 times along time in order to have a more informed classifier training. 
-   - Number of descriptors can be further increased by extracting statistical features of the 3-axes components (e.g., median, SD, kurtosis, 1st Fourier transform element, etc) 
-   - Check this [repo](https://iohk.io/en/blog/posts/2022/02/03/implementing-hydra-heads-the-first-step-towards-the-full-hydra-vision/) for a more in-depth analysis
+   - Number of descriptors can be further increased by extracting statistical features of the 3-axes components (e.g., median, SD, kurtosis, 1st Fourier transform element, etc)
+   - 
+### See Also*
+This [repo](https://github.com/akhuperkar/HAR-Smartphone-Accelerometer) for a more in-depth analysis
 
